@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold text-gray-900;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold text-gray-800;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+  
+  h4 {
+    @apply text-xl font-medium text-gray-700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-200 text-gray-800 font-medium rounded-lg hover:bg-gray-300 transition-colors duration-200;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary-600 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .media-placeholder {
+    @apply bg-gradient-to-br from-gray-100 to-gray-200 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center p-8 text-gray-600;
+  }
+  
+  .media-placeholder-video {
+    @apply media-placeholder aspect-video;
+  }
+  
+  .media-placeholder-image {
+    @apply media-placeholder aspect-square;
+  }
+  
+  .media-placeholder-audio {
+    @apply media-placeholder h-24;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-3 overflow-hidden;
+  }
+  
+  .progress-bar-fill {
+    @apply h-full bg-gradient-to-r from-secondary-500 to-primary-600 transition-all duration-500 ease-out;
+  }
+  
+  .quiz-option {
+    @apply w-full text-left p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-all duration-200 cursor-pointer;
+  }
+  
+  .quiz-option-selected {
+    @apply border-primary-600 bg-primary-100;
+  }
+  
+  .quiz-option-correct {
+    @apply border-green-600 bg-green-50;
+  }
+  
+  .quiz-option-incorrect {
+    @apply border-red-600 bg-red-50;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
